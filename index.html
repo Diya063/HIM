@@ -29,15 +29,27 @@
       cursor: pointer;
       margin: 30px auto;
       display: inline-block;
-      transition: transform 0.3s ease;
+      animation: heartbeat 1.2s infinite;
     }
 
-    .heart-btn:hover {
-      transform: scale(1.2);
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.4);
+      }
+    }
+
+    .hidden-message, .slide1 {
+      display: none;
+    }
+
+    .visible {
+      display: block;
     }
 
     .hidden-message {
-      display: none;
       background-color: #fce4ec;
       padding: 30px;
       margin: 20px auto;
@@ -64,73 +76,76 @@
       font-size: 20px;
       color: #ad1457;
     }
-
   </style>
 </head>
 <body>
 
-  <h1>Happy Birthday Him! 🎉</h1>
-  <h2>22 May 2025<br>With Love From Your Bestie,<br>Dia 💕</h2>
-
-  <div class="heart-btn" onclick="showMessage()">❤️ Click Here ❤️</div>
-
-  <div class="hidden-message" id="birthdayMessage">
-  <p><strong>Happy Birthday, Pagal Himm! 🎂😼</strong></p>
-  <p>
-    Oyeee talking cat of my life,<br>
-    BIGGEST OVERTHINKER— Yes YOU, the one who meows more sense than most humans!<br><br>
-
-    Today is your day, toh chill maar, cake ka maar, aur mujhe yaad kar! 🎉<br><br>
-
-    7 years, 8 months, 23 days of non-stop bakchodi, <br>
-    And still, tu mujhe jhel rahi hai—kya patience hai tere andar!<br>
-    I swear, tera noise cancellation mode kabhi ON hota hi nahi—<br>
-    But guess what? That’s exactly why I love you! 💘<br><br>
-
-    Tu voh crack wali chocolate hai jo kabhi bore nahi karti.<br>
-    Aur haan… Aaj tujhe officially permission hai to flirt with cake,<br>
-    Bas candle ke saath mat chedkhaani karna, woh melt ho jaayegi—<br>
-    unlike me, jo already tere liye pighli jaati hoon har roz! 😚<br><br>
-
-    Party hard, laugh louder, and remember:<br>
-    Jab tu pagal hoti hai na… tab tu sabse zyada perfect lagti hai! 💕<br><br>
-
-    — YOUR BESTIE, <br><strong>Diya</strong>
-  </p>
-
-  <hr style="margin: 30px 0; border: 1px dashed #ba68c8;">
-
-  <p>
-    <strong>Mini-Message 2:</strong><br>
-    Tere bina meri zindagi kya hai? Bilkul voh pizza jisme cheese nahi hota! 🍕<br>
-    Tere bina meri selfie bhi incomplete lagti hai... because you're the only one who makes my smile real. 📸❤️<br>
-    Never change, upgrade your madness every year!
-  </p>
-
-  <hr style="margin: 30px 0; border: 1px dashed #ba68c8;">
-
-  <p>
-    <strong>Mini-Message 3:</strong><br>
-    Hamesha yaad rakh: Tu sirf meri bestie nahi hai, tu meri therapy bhi hai—free version with unlimited sessions! 🧠💬<br>
-    Bas mujhe kabhi replace mat karna warna tujhe har jagah "meow meow" karte rehna padega alone! 😾<br>
-    Love you, crack queen! Happy Birthday once again! 🥳
-  </p>
-</div>
-
-
-  <div class="photos">
-    <!-- Add 2 of your favorite photos here -->
-    <img src="IMG-20220303-WA0000.jpg" alt="Himanshi Photo 1">
-    <img src="Snapchat-2066438655.jpg" alt="Himanshi Photo 2">
+  <!-- Slide 1 -->
+  <div class="slide1 visible" id="slide1">
+    <h1>Happy Birthday Him! 🎉</h1>
+    <h2>22 May 2025<br>With Love From Your Bestie,<br>Dia 💕</h2>
+    <div class="heart-btn" onclick="showMessage()">❤️ Click Here ❤️</div>
   </div>
 
-  <div class="footer">
-    — With endless love, <strong>Dia</strong> 💗
+  <!-- Slide 2 -->
+  <div class="hidden-message" id="birthdayMessage">
+    <p><strong>Happy Birthday, Pagal Himm! 🎂😼</strong></p>
+    <p>
+      Oyeee talking cat of my life,<br>
+      BIGGEST OVERTHINKER— Yes YOU, the one who meows more sense than most humans!<br><br>
+
+      Today is your day, toh chill maar, cake ka maar, aur mujhe yaad kar! 🎉<br><br>
+
+      7 years, 8 months, 23 days of non-stop bakchodi, <br>
+      And still, tu mujhe jhel rahi hai—kya patience hai tere andar!<br>
+      I swear, tera noise cancellation mode kabhi ON hota hi nahi—<br>
+      But guess what? That’s exactly why I love you! 💘<br><br>
+
+      Tu voh crack wali chocolate hai jo kabhi bore nahi karti.<br>
+      Aur haan… Aaj tujhe officially permission hai to flirt with cake,<br>
+      Bas candle ke saath mat chedkhaani karna, woh melt ho jaayegi—<br>
+      unlike me, jo already tere liye pighli jaati hoon har roz! 😚<br><br>
+
+      Party hard, laugh louder, and remember:<br>
+      Jab tu pagal hoti hai na… tab tu sabse zyada perfect lagti hai! 💕<br><br>
+
+      — YOUR BESTIE, <br><strong>Diya</strong>
+    </p>
+
+    <hr style="margin: 30px 0; border: 1px dashed #ba68c8;">
+
+    <p>
+      <strong>Mini-Message 2:</strong><br>
+      Tere bina meri zindagi kya hai? Bilkul voh pizza jisme cheese nahi hota! 🍕<br>
+      Tere bina meri selfie bhi incomplete lagti hai... because you're the only one who makes my smile real. 📸❤️<br>
+      Never change, upgrade your madness every year!
+    </p>
+
+    <hr style="margin: 30px 0; border: 1px dashed #ba68c8;">
+
+    <p>
+      <strong>Mini-Message 3:</strong><br>
+      Hamesha yaad rakh: Tu sirf meri bestie nahi hai, tu meri therapy bhi hai—free version with unlimited sessions! 🧠💬<br>
+      Bas mujhe kabhi replace mat karna warna tujhe har jagah "meow meow" karte rehna padega alone! 😾<br>
+      Love you, crack queen! Happy Birthday once again! 🥳
+    </p>
+
+    <div class="photos">
+      <!-- Add 2 of your favorite photos here -->
+      <img src="IMG-20220303-WA0000.jpg" alt="Himanshi Photo 1">
+      <img src="Snapchat-2066438655.jpg" alt="Himanshi Photo 2">
+    </div>
+
+    <div class="footer">
+      — With endless love, <strong>Dia</strong> 💗
+    </div>
   </div>
 
   <script>
     function showMessage() {
-      document.getElementById('birthdayMessage').style.display = 'block';
+      document.getElementById('slide1').classList.remove('visible');
+      document.getElementById('slide1').style.display = 'none';
+      document.getElementById('birthdayMessage').classList.add('visible');
     }
   </script>
 
